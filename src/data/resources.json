@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "title": "Google IT Support Professional Certificate",
+    "description": "Foundational IT skills including networking, operating systems, and system administration",
+    "url": "https://www.coursera.org/professional-certificates/google-it-support",
+    "category": "Foundational",
+    "color": "blue",
+    "type": "Course"
+  },
+  {
+    "id": 2,
+    "title": "Google Project Management Certificate",
+    "description": "Learn project management fundamentals and Agile methodologies",
+    "url": "https://www.coursera.org/professional-certificates/google-project-management",
+    "category": "Foundational",
+    "color": "green",
+    "type": "Course"
+  },
+  {
+    "id": 3,
+    "title": "Communication Skills for Engineers",
+    "description": "Effective communication strategies for technical professionals",
+    "url": "https://developers.google.com/learn",
+    "category": "Foundational",
+    "color": "yellow",
+    "type": "Guide"
+  },
+  {
+    "id": 4,
+    "title": "Public Speaking & Presentation",
+    "description": "Master the art of technical presentations and demos",
+    "url": "https://developers.google.com/community",
+    "category": "Foundational",
+    "color": "red",
+    "type": "Workshop"
+  },
+  {
+    "id": 5,
+    "title": "Angular Framework",
+    "description": "Build scalable web applications with Angular",
+    "url": "https://angular.io",
+    "category": "App Dev",
+    "color": "red",
+    "type": "Framework"
+  },
+  {
+    "id": 6,
+    "title": "Angular GitHub Repository",
+    "description": "Explore Angular source code and contribute",
+    "url": "https://github.com/angular/angular",
+    "category": "Community",
+    "color": "blue",
+    "type": "Repository"
+  },
+  {
+    "id": 7,
+    "title": "Android Development",
+    "description": "Build native Android apps with modern tools",
+    "url": "https://developer.android.com",
+    "category": "App Dev",
+    "color": "green",
+    "type": "Platform"
+  },
+  {
+    "id": 8,
+    "title": "Flutter Framework",
+    "description": "Create beautiful cross-platform apps with Flutter",
+    "url": "https://flutter.dev",
+    "category": "App Dev",
+    "color": "blue",
+    "type": "Framework"
+  },
+  {
+    "id": 9,
+    "title": "Jetpack Compose",
+    "description": "Modern toolkit for building native Android UI",
+    "url": "https://developer.android.com/jetpack/compose",
+    "category": "App Dev",
+    "color": "green",
+    "type": "Library"
+  },
+  {
+    "id": 10,
+    "title": "Firebase Platform",
+    "description": "Build and scale your app with Firebase backend services",
+    "url": "https://firebase.google.com",
+    "category": "App Dev",
+    "color": "yellow",
+    "type": "Platform"
+  },
+  {
+    "id": 11,
+    "title": "Machine Learning Crash Course",
+    "description": "Google's fast-paced, practical introduction to ML",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "category": "AI & Data",
+    "color": "blue",
+    "type": "Course"
+  },
+  {
+    "id": 12,
+    "title": "TensorFlow",
+    "description": "End-to-end ML platform for building and deploying models",
+    "url": "https://www.tensorflow.org",
+    "category": "AI & Data",
+    "color": "yellow",
+    "type": "Framework"
+  },
+  {
+    "id": 13,
+    "title": "Gemini AI",
+    "description": "Build with Google's most capable AI model",
+    "url": "https://ai.google.dev/gemini-api/docs",
+    "category": "AI & Data",
+    "color": "blue",
+    "type": "API"
+  },
+  {
+    "id": 14,
+    "title": "PaLM API",
+    "description": "Access Google's large language models via API",
+    "url": "https://developers.generativeai.google/products/palm",
+    "category": "AI & Data",
+    "color": "green",
+    "type": "API"
+  },
+  {
+    "id": 15,
+    "title": "PaLM GitHub Demos",
+    "description": "Explore PaLM API code samples and demos",
+    "url": "http://goo.gle/palm-demos",
+    "category": "Community",
+    "color": "green",
+    "type": "Repository"
+  },
+  {
+    "id": 16,
+    "title": "Generative AI Learning Path",
+    "description": "Comprehensive course on building with Gen AI",
+    "url": "https://www.cloudskillsboost.google/paths",
+    "category": "AI & Data",
+    "color": "red",
+    "type": "Course"
+  },
+  {
+    "id": 17,
+    "title": "Data Science Foundations",
+    "description": "Learn data analysis, visualization, and statistics",
+    "url": "https://developers.google.com/learn",
+    "category": "AI & Data",
+    "color": "yellow",
+    "type": "Course"
+  },
+  {
+    "id": 18,
+    "title": "Google Cloud Platform",
+    "description": "Build, deploy, and scale on Google's infrastructure",
+    "url": "https://cloud.google.com",
+    "category": "Infrastructure",
+    "color": "blue",
+    "type": "Platform"
+  },
+  {
+    "id": 19,
+    "title": "Cloud Firestore",
+    "description": "Flexible, scalable NoSQL cloud database",
+    "url": "https://firebase.google.com/docs/firestore",
+    "category": "Infrastructure",
+    "color": "yellow",
+    "type": "Database"
+  },
+  {
+    "id": 20,
+    "title": "Cloud Computing Fundamentals",
+    "description": "Learn cloud architecture and deployment strategies",
+    "url": "https://www.cloudskillsboost.google",
+    "category": "Infrastructure",
+    "color": "green",
+    "type": "Course"
+  },
+  {
+    "id": 21,
+    "title": "Build with AI Codelabs",
+    "description": "Hands-on coding tutorials for AI applications",
+    "url": "https://codelabs.developers.google.com",
+    "category": "Interactive",
+    "color": "red",
+    "type": "Tutorial"
+  },
+  {
+    "id": 22,
+    "title": "Google Skills Boost",
+    "description": "Gamified learning paths and skill badges",
+    "url": "https://www.cloudskillsboost.google",
+    "category": "Interactive",
+    "color": "blue",
+    "type": "Platform"
+  },
+  {
+    "id": 23,
+    "title": "Google for Developers Discord",
+    "description": "Join the global developer community",
+    "url": "http://discord.gg/google-dev-community",
+    "category": "Community",
+    "color": "blue",
+    "type": "Community"
+  },
+  {
+    "id": 24,
+    "title": "PaLM Discord Channel",
+    "description": "Connect with PaLM API developers",
+    "url": "http://goo.gle/palm-discord",
+    "category": "Community",
+    "color": "green",
+    "type": "Community"
+  },
+  {
+    "id": 25,
+    "title": "Angular Discord",
+    "description": "Get help and share Angular projects",
+    "url": "https://discord.gg/angular",
+    "category": "Community",
+    "color": "red",
+    "type": "Community"
+  },
+  {
+    "id": 26,
+    "title": "Solution Challenge FAQ",
+    "description": "Frequently asked questions and answers",
+    "url": "https://docs.google.com/document/d/19x50SVjga70xkx_pfs1h9M7zgSMmzR1D8vG09wF7nyo/edit?tab=t.0",
+    "category": "Interactive",
+    "color": "yellow",
+    "type": "Guide"
+  },
+  {
+    "id": 27,
+    "title": "Submission Guidelines",
+    "description": "How to submit your Solution Challenge project",
+    "url": "https://docs.google.com/document/d/1JT6jDAoUOpTyIz7VF9qb9h2JXl7VyXkJPAydcAFazyQ/edit?tab=t.0",
+    "category": "Interactive",
+    "color": "green",
+    "type": "Guide"
+  },
+  {
+    "id": 28,
+    "title": "Participant Guide",
+    "description": "Complete guide for Solution Challenge participants",
+    "url": "https://docs.google.com/presentation/d/1udzbhtKFeNhyYdi5JBmrxB91-6MfYFZi9H6ifbq-YfE/edit",
+    "category": "Interactive",
+    "color": "blue",
+    "type": "Guide"
+  },
+  {
+    "id": 29,
+    "title": "Project Submission Guidelines (PDF)",
+    "description": "Official guidelines for submitting your Solution Challenge project - Download and review before submission",
+    "url": "/external_2026_gdg_on_campus_solution_challenge_guidelines_for_submitting_a_project.pdf",
+    "category": "Interactive",
+    "color": "red",
+    "type": "PDF Guide"
+  },
+  {
+    "id": 30,
+    "title": "Terms & Conditions (PDF)",
+    "description": "Official terms and conditions for the 2026 GDG on Campus Solution Challenge North America",
+    "url": "/2026terms_and_conditions_gdgoncampus_solutionchallengenorthamerica_20260108180055.pdf",
+    "category": "Interactive",
+    "color": "yellow",
+    "type": "PDF Document"
+  }
+]

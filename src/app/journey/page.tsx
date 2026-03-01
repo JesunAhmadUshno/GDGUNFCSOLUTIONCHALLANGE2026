@@ -732,7 +732,10 @@ function ProblemDiscoverySection({ setActiveSection }: any) {
             <div className={`bg-gradient-to-r ${steps[currentStep].color} p-1 rounded-3xl`}>
               <div className="bg-gray-950 rounded-3xl p-8 md:p-12">
                 <div className="flex items-center gap-4 mb-6">
-                  {React.createElement(steps[currentStep].icon, { className: 'w-12 h-12 text-white' })}
+                  {(() => {
+                    const StepIcon = steps[currentStep].icon;
+                    return <StepIcon className="w-12 h-12 text-white" />;
+                  })()}
                   <div>
                     <p className="text-sm text-gray-400">Step {currentStep + 1} of {steps.length}</p>
                     <h3 className="text-3xl md:text-4xl font-black text-white">{steps[currentStep].title}</h3>

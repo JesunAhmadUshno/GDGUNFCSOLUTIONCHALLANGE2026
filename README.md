@@ -6,12 +6,15 @@
 ![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-34A853?style=for-the-badge)
 
-**An AWARD-WINNING interactive resource directory that will make your jaw DROP**
+**An AWARD-WINNING interactive resource directory for the 2026 GDG on Campus North America Solution Challenge**
+
+> 🏆 Stunning dark glassmorphism UI with Google brand colors, featuring 30+ curated resources across 6 categories, advanced Framer Motion animations, real-time search & filtering, featured PDF documents showcase, and fully responsive design. Built with modern web technologies for maximum impact.
 
 **30+ Resources • 6 Categories • 100% Free • 1000% Stunning**
 
-[🚀 Features](#-features) • [🎨 Design](#-design-system) • [⚡ Quick Start](#-quick-start)
+[🚀 Live Demo](https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/) • [🎨 Features](#-features-that-will-blow-your-mind) • [⚡ Quick Start](#-quick-start)
 
 </div>
 
@@ -233,12 +236,18 @@ Edit `tailwind.config.js` under `theme.extend.colors`.
 
 ## 📄 License
 
-This project is open source and available for educational purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**TL;DR:** You can freely use, modify, and distribute this project with attribution. Perfect for learning and building upon! 🚀
 
 ## 👤 Author
 
 **Jesun Ahmad Ushno**  
 Representing GDG On Campus University Of Niagara Falls Canada
+
+📧 Contact: Available via GitHub  
+🌐 Portfolio: [GitHub Profile](https://github.com/JesunAhmadUshno)  
+💼 LinkedIn: Connect for collaboration opportunities
 
 ---
 

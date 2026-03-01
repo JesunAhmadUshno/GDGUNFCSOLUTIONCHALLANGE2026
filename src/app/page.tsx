@@ -2,8 +2,9 @@
 
 import { useState, useMemo } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Search, ExternalLink, Sparkles, Code, Database, Cpu, Users, Zap, FileText, Download, Star, Award, Rocket, Flame } from 'lucide-react'
+import { Search, ExternalLink, Sparkles, Code, Database, Cpu, Users, Zap, FileText, Download, Star, Award, Rocket, Flame, ArrowRight, Play } from 'lucide-react'
 import resourcesData from '@/data/resources.json'
+import Link from 'next/link'
 
 type Resource = {
   id: number
@@ -250,6 +251,54 @@ export default function Home() {
                   <div className="text-sm text-slate-400">{stat.label}</div>
                 </motion.div>
               ))}
+            </motion.div>
+
+            {/* Interactive Journey CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="mt-12"
+            >
+              <Link href="/journey">
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group relative px-10 py-5 rounded-full font-bold text-lg overflow-hidden"
+                >
+                  {/* Animated gradient background */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-google-blue via-google-red to-google-yellow"
+                    animate={{
+                      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                    style={{ backgroundSize: '200% 200%' }}
+                  />
+                  
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-google-blue/50 via-google-red/50 to-google-yellow/50 blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+                  
+                  {/* Button content */}
+                  <div className="relative flex items-center gap-3 text-white">
+                    <Play className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                    <span>Experience Interactive Journey</span>
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </motion.button>
+              </Link>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.1, duration: 0.6 }}
+                className="mt-4 text-sm text-slate-400"
+              >
+                🎯 Explore Timeline, Prizes, Judging Criteria & More in an Immersive Experience
+              </motion.p>
             </motion.div>
           </motion.div>
         </div>

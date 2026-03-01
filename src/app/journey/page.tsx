@@ -531,12 +531,12 @@ function JudgingCriteriaSection({ setActiveSection, criteriaScores, setCriteriaS
           <div className="bg-gray-950 rounded-3xl p-8 text-center">
             <p className="text-gray-400 text-sm uppercase tracking-wider mb-2">Total Score</p>
             <motion.p
-              key={Object.values(criteriaScores).reduce((a, b) => a + b, 0)}
+              key={`score-${criteriaScores.impact + criteriaScores.innovation + criteriaScores.communication + criteriaScores.feasibility}`}
               initial={{ scale: 1.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               className="text-6xl font-black text-white"
             >
-              {Object.values(criteriaScores).reduce((a, b) => a + b, 0)}
+              {criteriaScores.impact + criteriaScores.innovation + criteriaScores.communication + criteriaScores.feasibility}
               <span className="text-3xl text-gray-400"> / 20</span>
             </motion.p>
           </div>

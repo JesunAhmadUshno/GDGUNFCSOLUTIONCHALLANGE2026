@@ -237,7 +237,7 @@
     "id": 27,
     "title": "Submission Guidelines",
     "description": "How to submit your Solution Challenge project",
-    "url": "https://docs.google.com/document/d/1JT6jDAoUOpTyIz7VF9qb9h2JXl7VyXkJPAydcAFazyQ/edit?tab=t.0",
+    "url": "https://docs.google.com/document/d/1Ll47TAjVGC5JJMIc0ECJkcEkKy_gQ33GbljRRaBUXlU/edit?usp=sharing",
     "category": "Interactive",
     "color": "green",
     "type": "Guide"
@@ -246,7 +246,7 @@
     "id": 28,
     "title": "Participant Guide",
     "description": "Complete guide for Solution Challenge participants",
-    "url": "https://docs.google.com/presentation/d/1udzbhtKFeNhyYdi5JBmrxB91-6MfYFZi9H6ifbq-YfE/edit",
+    "url": "https://docs.google.com/presentation/d/1aIR-2BQyF9RSQYCRJkSvKfWysL-QkgOuHobhlqQEYc8/edit?usp=sharing",
     "category": "Interactive",
     "color": "blue",
     "type": "Guide"
@@ -255,7 +255,7 @@
     "id": 29,
     "title": "Project Submission Guidelines (PDF)",
     "description": "Official guidelines for submitting your Solution Challenge project - Download and review before submission",
-    "url": "/external_2026_gdg_on_campus_solution_challenge_guidelines_for_submitting_a_project.pdf",
+    "url": "https://docs.google.com/document/d/1Ll47TAjVGC5JJMIc0ECJkcEkKy_gQ33GbljRRaBUXlU/edit?usp=sharing",
     "category": "Interactive",
     "color": "red",
     "type": "PDF Guide"
@@ -268,5 +268,23 @@
     "category": "Interactive",
     "color": "yellow",
     "type": "PDF Document"
+  },
+  {
+    "id": 31,
+    "title": "Contest Entry Form",
+    "description": "Submit your Solution Challenge project entry",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSejSurzVxlitfePMXnLwMS8bBbq57mfBKZaFp4JyO1VgDokNA/viewform",
+    "category": "Interactive",
+    "color": "blue",
+    "type": "Form"
+  },
+  {
+    "id": 32,
+    "title": "Cloud Resource Request Form",
+    "description": "Request cloud resources for your Solution Challenge project",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSej1ra-Np65o_bqeBQBteqzjsFCeASJx3n1Lv4brDLLeOeFpg/viewform",
+    "category": "Interactive",
+    "color": "green",
+    "type": "Form"
   }
 ]

@@ -162,7 +162,7 @@ export default function InteractiveJourney() {
                 </motion.button>
               </Link>
               <motion.a
-                href="https://developers.google.com/community/gdg/solutions-challenge"
+                href="https://gdg.community.dev/gdg-on-campus-niagara-falls/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

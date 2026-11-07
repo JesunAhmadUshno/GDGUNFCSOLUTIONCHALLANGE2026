@@ -4,6 +4,13 @@ import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence 
 import { Rocket, Trophy, Target, Lightbulb, Code, Calendar, Award, Star, Zap, CheckCircle, ArrowRight, ChevronDown, Sparkles, BookOpen, Users, Clock, DollarSign, Medal, TrendingUp, BarChart3, MessageSquare, Presentation, Shield } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import journey from '@/data/journey.json';
+
+// Dates, prizes and criteria live in src/data/journey.json so the dashboard and data checks share one source.
+const fmtDay = (iso: string, withYear = true) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: withYear ? 'numeric' : undefined, timeZone: 'UTC' });
+const fmtRange = (start: string, end: string) => (start === end ? fmtDay(start) : `${fmtDay(start, false)} - ${fmtDay(end)}`);
+const prizeIcons: Record<string, any> = { award: Award, dollar: DollarSign, users: Users, presentation: Presentation, trending: TrendingUp, trophy: Trophy };
 
 export default function InteractiveJourney() {
   const containerRef = useRef(null);
@@ -188,48 +195,19 @@ function TimelineSection({ setActiveSection }: { setActiveSection: (idx: number)
     if (isInView) setActiveSection(0);
   }, [isInView, setActiveSection]);
 
-  const milestones = [
-    {
-      title: 'Solution Challenge Launch',
-      date: 'February 17, 2026',
-      description: 'Participants submit their entries between February 17 April 20, 2026',
-      icon: Rocket,
-      color: 'from-blue-500 to-cyan-500',
-      completed: true
-    },
-    {
-      title: 'Initial Submission Deadline',
-      date: 'April 20, 2026',
-      description: 'Participants submit their entries between February 17 April 20, 2026',
-      icon: BookOpen,
-      color: 'from-red-500 to-orange-500',
-      completed: false
-    },
-    {
-      title: 'Preliminary Judging',
-      date: 'April 23 - May 7, 2026',
-      description: 'Entries will be evaluated to entries will be ennie evaluated to select 10 entries.',
-      icon: Target,
-      color: 'from-purple-500 to-pink-500',
-      completed: false
-    },
-    {
-      title: 'Finalists Submission Deadline',
-      date: 'June 12, 2026',
-      description: '10 Finalists will have a chance to refine and resubmit entries w12 with mentorship from Google Developer across Product Areas.',
-      icon: Star,
-      color: 'from-yellow-500 to-orange-500',
-      completed: false
-    },
-    {
-      title: 'Regional Demo Day',
-      date: 'July 10, 2026',
-      description: 'Top 3 Winners Announced - During Regional Demo Day, winning teams are announced',
-      icon: Trophy,
-      color: 'from-green-500 to-emerald-500',
-      completed: false
-    }
+  const milestoneStyle = [
+    { icon: Rocket, color: 'from-blue-500 to-cyan-500' },
+    { icon: BookOpen, color: 'from-red-500 to-orange-500' },
+    { icon: Target, color: 'from-purple-500 to-pink-500' },
+    { icon: Star, color: 'from-yellow-500 to-orange-500' },
+    { icon: Trophy, color: 'from-green-500 to-emerald-500' }
   ];
+  const milestones = journey.milestones.map((m, idx) => ({
+    ...m,
+    ...milestoneStyle[idx % milestoneStyle.length],
+    date: fmtRange(m.start, m.end),
+    completed: new Date(`${m.end}T23:59:59Z`) < new Date()
+  }));
 
   return (
     <section id="timeline" ref={ref} className="min-h-screen py-20 px-6 relative">
@@ -313,52 +291,18 @@ function PrizesSection({ setActiveSection, selectedPrize, setSelectedPrize }: an
     if (isInView) setActiveSection(1);
   }, [isInView, setActiveSection]);
 
-  const prizeTiers = [
-    {
-      id: 'all',
-      title: 'All Contestants',
-      color: 'from-gray-500 to-gray-600',
-      icon: Users,
-      prizes: [
-        { name: 'Google Developer Program Badge', icon: Award },
-        { name: 'Google Cloud Credits ($5 voucher)', icon: DollarSign }
-      ]
-    },
-    {
-      id: 'final10',
-      title: 'Final 10',
-      color: 'from-purple-500 to-pink-500',
-      icon: Medal,
-      prizes: [
-        { name: 'Expert Mentorship', icon: Users },
-        { name: 'Regional Demo Day Presentation', icon: Presentation },
-        { name: 'Digital Certificate: Final 10', icon: Award }
-      ]
-    },
-    {
-      id: 'peoples',
-      title: "People's Choice",
-      color: 'from-blue-500 to-cyan-500',
-      icon: Star,
-      prizes: [
-        { name: "Digital Certificate: People's Choice", icon: Award },
-        { name: 'Google Cloud Credits', icon: DollarSign },
-        { name: 'Featured posts on North America GDG social channel(s)', icon: TrendingUp }
-      ]
-    },
-    {
-      id: 'winning3',
-      title: 'Winning 3',
-      color: 'from-yellow-500 to-orange-500',
-      icon: Trophy,
-      prizes: [
-        { name: 'All expenses paid visit to Google office for 1-day in-person Demo Day experience', icon: Trophy },
-        { name: 'Google branded SWAG (ARV >$100)', icon: Award },
-        { name: 'Digital Certificate: Winning 3', icon: Award },
-        { name: 'Featured posts on North America GDG social channel(s)', icon: TrendingUp }
-      ]
-    }
-  ];
+  const tierStyle: Record<string, { color: string; icon: any }> = {
+    all: { color: 'from-gray-500 to-gray-600', icon: Users },
+    final10: { color: 'from-purple-500 to-pink-500', icon: Medal },
+    peoples: { color: 'from-blue-500 to-cyan-500', icon: Star },
+    winning3: { color: 'from-yellow-500 to-orange-500', icon: Trophy }
+  };
+  const prizeTiers = journey.prizeTiers.map((t) => ({
+    ...t,
+    ...tierStyle[t.id],
+    prizes: t.prizes.map((p) => ({ name: p.name, icon: prizeIcons[p.icon] ?? Award }))
+  }));
+
 
   return (
     <section id="prizes" ref={ref} className="min-h-screen py-20 px-6 relative">
@@ -455,56 +399,14 @@ function JudgingCriteriaSection({ setActiveSection, criteriaScores, setCriteriaS
     if (isInView) setActiveSection(2);
   }, [isInView, setActiveSection]);
 
-  const criteria = [
-    {
-      id: 'impact',
-      title: 'Impact & Value',
-      color: 'from-blue-500 to-cyan-500',
-      icon: TrendingUp,
-      points: 5,
-      questions: [
-        'Does the solution offer tangible benefits to the business?',
-        'Does the team describe the success of their solution using metrics, goals, outcomes, or cause and effects?',
-        'What is the potential reach and significance of the solution?'
-      ]
-    },
-    {
-      id: 'innovation',
-      title: 'Innovation & Creativity',
-      color: 'from-red-500 to-pink-500',
-      icon: Lightbulb,
-      points: 5,
-      questions: [
-        'Does the solution effectively leverage Google technology in a creative way?',
-        'Does the solution offer a new approach or perspective to the problem?'
-      ]
-    },
-    {
-      id: 'communication',
-      title: 'Communication & Presentation',
-      color: 'from-yellow-500 to-orange-500',
-      icon: MessageSquare,
-      points: 5,
-      questions: [
-        'Is the solution explained in a clear, concise, and understandable manner?',
-        'Are diagrams, mockups, or prototypes used effectively?',
-        'How well is the solution presented? Is it persuasive and engaging?'
-      ]
-    },
-    {
-      id: 'feasibility',
-      title: 'Feasibility & Functionality',
-      color: 'from-green-500 to-emerald-500',
-      icon: Shield,
-      points: 5,
-      questions: [
-        'How well does the solution actually solve the stated problem?',
-        'Can the solution be realistically implemented with available technology?',
-        'Is the technical implementation well-executed with proper coding, design, and architecture?',
-        'Does the solution optimize resources (time, cost, labor)?'
-      ]
-    }
-  ];
+  const criteriaStyle: Record<string, { color: string; icon: any }> = {
+    impact: { color: 'from-blue-500 to-cyan-500', icon: TrendingUp },
+    innovation: { color: 'from-red-500 to-pink-500', icon: Lightbulb },
+    communication: { color: 'from-yellow-500 to-orange-500', icon: MessageSquare },
+    feasibility: { color: 'from-green-500 to-emerald-500', icon: Shield }
+  };
+  const criteria = journey.criteria.map((c) => ({ ...c, ...criteriaStyle[c.id] }));
+
 
   return (
     <section id="criteria" ref={ref} className="min-h-screen py-20 px-6 relative">

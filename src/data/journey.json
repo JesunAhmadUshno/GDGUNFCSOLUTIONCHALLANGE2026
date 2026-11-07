@@ -1,0 +1,159 @@
+{
+  "sources": {
+    "site": { "label": "This site (journey page)", "file": "src/data/journey.json" },
+    "tc": { "label": "Official Rules (T&C PDF)", "file": "public/2026terms_and_conditions_gdgoncampus_solutionchallengenorthamerica_20260108180055.pdf" },
+    "guidelines": { "label": "Submission guidelines PDF", "file": "public/external_2026_gdg_on_campus_solution_challenge_guidelines_for_submitting_a_project.pdf" }
+  },
+  "milestones": [
+    {
+      "id": "launch",
+      "title": "Solution Challenge Launch",
+      "start": "2026-02-17",
+      "end": "2026-02-17",
+      "description": "Participants submit their entries between February 17 and April 20, 2026.",
+      "source": "site",
+      "compare": ["tc-entry-open", "gl-form-open"]
+    },
+    {
+      "id": "deadline",
+      "title": "Initial Submission Deadline",
+      "start": "2026-04-20",
+      "end": "2026-04-20",
+      "description": "Last day to submit an initial entry.",
+      "source": "site",
+      "compare": ["tc-round1-close"]
+    },
+    {
+      "id": "prelim",
+      "title": "Preliminary Judging",
+      "start": "2026-04-23",
+      "end": "2026-05-07",
+      "description": "Entries are evaluated to select the Final 10.",
+      "source": "site",
+      "compare": ["tc-round1-judging", "gl-judging"]
+    },
+    {
+      "id": "finalists",
+      "title": "Finalists Submission Deadline",
+      "start": "2026-06-12",
+      "end": "2026-06-12",
+      "description": "The Final 10 refine and resubmit their entries with mentorship from Google Developers across product areas.",
+      "source": "site",
+      "compare": ["tc-round2-close"]
+    },
+    {
+      "id": "demoday",
+      "title": "Regional Demo Day",
+      "start": "2026-07-10",
+      "end": "2026-07-10",
+      "description": "Top 3 winners are announced during Regional Demo Day.",
+      "source": "site",
+      "compare": []
+    }
+  ],
+  "officialDates": [
+    { "id": "tc-entry-open", "label": "Contest Entry Period opens (Round 1)", "start": "2026-02-02", "end": "2026-02-02", "source": "tc", "cite": "Section 4, Contest Entry Period" },
+    { "id": "tc-round1", "label": "Round 1 submission", "start": "2026-02-02", "end": "2026-03-30", "source": "tc", "cite": "Section 6, Judging" },
+    { "id": "tc-round1-close", "label": "Round 1 entries due", "start": "2026-03-30", "end": "2026-03-30", "source": "tc", "cite": "Section 5, How to Enter" },
+    { "id": "tc-round1-judging", "label": "Round 1 judging (approximately)", "start": "2026-04-02", "end": "2026-04-16", "source": "tc", "cite": "Section 6, Judging" },
+    { "id": "tc-final10-notice", "label": "Final 10 notified (on or about)", "start": "2026-04-21", "end": "2026-04-21", "source": "tc", "cite": "Section 6, Judging" },
+    { "id": "tc-round2", "label": "Round 2 resubmission (Final 10)", "start": "2026-04-27", "end": "2026-05-22", "source": "tc", "cite": "Section 6, Judging" },
+    { "id": "tc-round2-close", "label": "Round 2 entries due", "start": "2026-05-22", "end": "2026-05-22", "source": "tc", "cite": "Section 5, How to Enter" },
+    { "id": "tc-round2-judging", "label": "Round 2 judging (approximately)", "start": "2026-05-27", "end": "2026-06-03", "source": "tc", "cite": "Section 6, Judging" },
+    { "id": "gl-form-open", "label": "Submission form opens", "start": "2026-02-17", "end": "2026-02-17", "source": "guidelines", "cite": "Overview" },
+    { "id": "gl-judging", "label": "Judging process (repository must stay public)", "start": "2026-04-23", "end": "2026-07-01", "source": "guidelines", "cite": "GitHub Guidelines" }
+  ],
+  "rulesNotes": [
+    "Section 5 of the Official Rules lists Round 2 as \"February 1, 2026 - May 22,, 2026\", while Section 6 gives April 27 to May 22, 2026.",
+    "Neither PDF gives a date for Regional Demo Day; the July 10, 2026 date appears only on this site."
+  ],
+  "prizeTiers": [
+    {
+      "id": "all",
+      "title": "All Contestants",
+      "prizes": [
+        { "name": "Google Developer Program Badge", "icon": "award", "inRules": null },
+        { "name": "Google Cloud Credits ($5 voucher)", "icon": "dollar", "inRules": null }
+      ]
+    },
+    {
+      "id": "final10",
+      "title": "Final 10",
+      "prizes": [
+        { "name": "Expert Mentorship", "icon": "users", "inRules": "Section 6 and Section 7" },
+        { "name": "Regional Demo Day Presentation", "icon": "presentation", "inRules": "Section 7" },
+        { "name": "Digital Certificate: Final 10", "icon": "award", "inRules": "Section 7" }
+      ]
+    },
+    {
+      "id": "peoples",
+      "title": "People's Choice",
+      "prizes": [
+        { "name": "Digital Certificate: People's Choice", "icon": "award", "inRules": "Section 8" },
+        { "name": "Google Cloud Credits", "icon": "dollar", "inRules": "Section 8" },
+        { "name": "Featured posts on North America GDG social channel(s)", "icon": "trending", "inRules": "Section 8" }
+      ]
+    },
+    {
+      "id": "winning3",
+      "title": "Winning 3",
+      "prizes": [
+        { "name": "All expenses paid visit to Google office for 1-day in-person Demo Day experience", "icon": "trophy", "inRules": "Section 7 (worded as a travel and lodging sponsorship for a campus tour)" },
+        { "name": "Google branded SWAG (ARV >$100)", "icon": "award", "inRules": "Section 7 (states ARV: $100, not more than $100)" },
+        { "name": "Digital Certificate: Winning 3", "icon": "award", "inRules": null },
+        { "name": "Featured posts on North America GDG social channel(s)", "icon": "trending", "inRules": "Section 7 (featured on Google Developers channels)" }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "impact",
+      "title": "Impact & Value",
+      "rulesTitle": "Impact & Value",
+      "points": 5,
+      "rulesQuestions": 3,
+      "questions": [
+        "Does the solution offer tangible benefits to the business?",
+        "Does the team describe the success of their solution using metrics, goals, outcomes, or cause and effects?",
+        "What is the potential reach and significance of the solution?"
+      ]
+    },
+    {
+      "id": "innovation",
+      "title": "Innovation & Creativity",
+      "rulesTitle": "Innovation & Creativity",
+      "points": 5,
+      "rulesQuestions": 2,
+      "questions": [
+        "Does the solution effectively leverage Google technology in a creative way?",
+        "Does the solution offer a new approach or perspective to the problem?"
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Communication & Presentation",
+      "rulesTitle": "Presentation & Communication",
+      "points": 5,
+      "rulesQuestions": 4,
+      "questions": [
+        "Is the solution explained in a clear, concise, and understandable manner?",
+        "Are diagrams, mockups, or prototypes used effectively?",
+        "How well is the solution presented? Is it persuasive and engaging?"
+      ]
+    },
+    {
+      "id": "feasibility",
+      "title": "Feasibility & Functionality",
+      "rulesTitle": "Functionality & Feasibility",
+      "points": 5,
+      "rulesQuestions": 4,
+      "questions": [
+        "How well does the solution actually solve the stated problem?",
+        "Can the solution be realistically implemented with available technology?",
+        "Is the technical implementation well-executed with proper coding, design, and architecture?",
+        "Does the solution optimize resources (time, cost, labor)?"
+      ]
+    }
+  ],
+  "rulesTieBreak": "Section 6: a tie goes to the entry with the higher score in \u201cImpact & Value\u201d \u201cInnovation & Creativity\u201d (printed without a conjunction)."
+}

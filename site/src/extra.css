@@ -1,0 +1,24 @@
+/* Dashboard-specific additions on top of the shared Lab OS styles.css. */
+input[type=search], input[type=date] { width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--surface-strong); color: var(--text); font: inherit; }
+input[type=search]:focus-visible, input[type=date]:focus-visible { outline: 3px solid color-mix(in srgb, var(--primary) 45%, transparent); outline-offset: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.list { max-height: 440px; display: grid; gap: 8px; align-content: start; padding-right: 4px; border-radius: 12px; }
+.list .item { display: block; text-decoration: none; color: var(--text); background: var(--surface-strong); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; transition: border-color .15s; }
+.list .item:hover { border-color: var(--primary); }
+.list .row1 { display: flex; justify-content: space-between; gap: 8px; }
+.list .row1 b { font-weight: 600; min-width: 0; }
+.list small { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.list .flags { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.notes { margin: 12px 0 0; padding-left: 18px; }
+.notes li { margin-top: 4px; }
+.audit { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 10px; font-size: 13px; }
+.audit .mono { overflow-wrap: anywhere; }
+.prize-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.prize-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 10px; font-size: 13px; }
+.prize-list li { display: grid; gap: 4px; justify-items: start; }
+.prize-list .pill { font-size: 11px; padding: 2px 9px; }
+td .hint { font-size: 11.5px; }
+@media (max-width: 960px) { .prize-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .prize-grid { grid-template-columns: 1fr; } }
+table.wide { min-width: 660px; }
+table.wide td:nth-child(2), table.wide td:nth-child(4) { white-space: nowrap; }

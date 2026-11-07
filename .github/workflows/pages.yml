@@ -1,0 +1,58 @@
+name: Pages
+
+# Builds the Next.js directory (root) and the audit dashboard (site/ -> /dashboard/)
+# into one artifact, since GitHub Pages serves a single artifact per repo.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            site/package-lock.json
+      - name: Check data
+        run: node scripts/check-data.mjs
+      - name: Build directory (Next.js static export to out/)
+        run: npm ci && npm run build
+      - name: Build dashboard (known-answer check, then Vite)
+        working-directory: site
+        run: npm ci && npm run build
+      - name: Combine and verify
+        run: |
+          mkdir -p out/dashboard
+          cp -r site/dist/. out/dashboard/
+          touch out/.nojekyll
+          test -f out/index.html
+          test -f out/journey/index.html
+          test -f out/dashboard/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

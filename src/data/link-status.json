@@ -1,0 +1,263 @@
+{
+  "checkedAt": "2026-11-07T17:33:25.671Z",
+  "method": "HEAD, then GET on error or status >= 400; redirects followed",
+  "results": [
+    {
+      "id": 1,
+      "url": "https://www.coursera.org/professional-certificates/google-it-support",
+      "status": 200,
+      "finalUrl": "https://www.coursera.org/professional-certificates/google-it-support",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 2,
+      "url": "https://www.coursera.org/professional-certificates/google-project-management",
+      "status": 200,
+      "finalUrl": "https://www.coursera.org/professional-certificates/google-project-management",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 3,
+      "url": "https://developers.google.com/learn",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/solutions/catalog",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 4,
+      "url": "https://developers.google.com/community",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/community",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 5,
+      "url": "https://angular.io",
+      "status": 200,
+      "finalUrl": "https://angular.dev/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/angular/angular",
+      "status": 200,
+      "finalUrl": "https://github.com/angular/angular",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 7,
+      "url": "https://developer.android.com",
+      "status": 200,
+      "finalUrl": "https://developer.android.com/?hl=es-419",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 8,
+      "url": "https://flutter.dev",
+      "status": 200,
+      "finalUrl": "https://flutter.dev/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 9,
+      "url": "https://developer.android.com/jetpack/compose",
+      "status": 200,
+      "finalUrl": "https://developer.android.com/compose",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 10,
+      "url": "https://firebase.google.com",
+      "status": 200,
+      "finalUrl": "https://firebase.google.com/?hl=es-419",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 11,
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/machine-learning/crash-course",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 12,
+      "url": "https://www.tensorflow.org",
+      "status": 200,
+      "finalUrl": "https://www.tensorflow.org/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 13,
+      "url": "https://ai.google.dev/gemini-api/docs",
+      "status": 200,
+      "finalUrl": "https://aistudio.google.com/docs",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 14,
+      "url": "https://developers.generativeai.google/products/palm",
+      "status": 200,
+      "finalUrl": "https://aistudio.google.com/docs/deprecations",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 15,
+      "url": "http://goo.gle/palm-demos",
+      "status": 200,
+      "finalUrl": "https://github.com/google/generative-ai-docs/tree/main/demos/palm",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 16,
+      "url": "https://www.cloudskillsboost.google/paths",
+      "status": 200,
+      "finalUrl": "https://www.skills.google/paths",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 17,
+      "url": "https://developers.google.com/learn",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/solutions/catalog",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 18,
+      "url": "https://cloud.google.com",
+      "status": 200,
+      "finalUrl": "https://cloud.google.com/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 19,
+      "url": "https://firebase.google.com/docs/firestore",
+      "status": 200,
+      "finalUrl": "https://firebase.google.com/docs/firestore?hl=es-419",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 20,
+      "url": "https://www.cloudskillsboost.google",
+      "status": 200,
+      "finalUrl": "https://www.skills.google/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 21,
+      "url": "https://codelabs.developers.google.com",
+      "status": 200,
+      "finalUrl": "https://codelabs.developers.google.com/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 22,
+      "url": "https://www.cloudskillsboost.google",
+      "status": 200,
+      "finalUrl": "https://www.skills.google/",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 23,
+      "url": "http://discord.gg/google-dev-community",
+      "status": 200,
+      "finalUrl": "https://discord.com/invite/google-dev-community",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 24,
+      "url": "http://goo.gle/palm-discord",
+      "status": 200,
+      "finalUrl": "https://aistudio.google.com/docs/discord",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 25,
+      "url": "https://discord.gg/angular",
+      "status": 200,
+      "finalUrl": "https://discord.com/invite/angular",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 26,
+      "url": "https://docs.google.com/document/d/19x50SVjga70xkx_pfs1h9M7zgSMmzR1D8vG09wF7nyo/edit?tab=t.0",
+      "status": 200,
+      "finalUrl": "https://accounts.google.com/v3/signin/identifier",
+      "method": "HEAD",
+      "redirected": true
+    },
+    {
+      "id": 27,
+      "url": "https://docs.google.com/document/d/1Ll47TAjVGC5JJMIc0ECJkcEkKy_gQ33GbljRRaBUXlU/edit?usp=sharing",
+      "status": 200,
+      "finalUrl": "https://docs.google.com/document/d/1Ll47TAjVGC5JJMIc0ECJkcEkKy_gQ33GbljRRaBUXlU/edit?usp=sharing",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 28,
+      "url": "https://docs.google.com/presentation/d/1aIR-2BQyF9RSQYCRJkSvKfWysL-QkgOuHobhlqQEYc8/edit?usp=sharing",
+      "status": 200,
+      "finalUrl": "https://docs.google.com/presentation/d/1aIR-2BQyF9RSQYCRJkSvKfWysL-QkgOuHobhlqQEYc8/edit?usp=sharing",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 29,
+      "url": "https://docs.google.com/document/d/1Ll47TAjVGC5JJMIc0ECJkcEkKy_gQ33GbljRRaBUXlU/edit?usp=sharing",
+      "status": 200,
+      "finalUrl": "https://docs.google.com/document/d/1Ll47TAjVGC5JJMIc0ECJkcEkKy_gQ33GbljRRaBUXlU/edit?usp=sharing",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 30,
+      "url": "https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/2026terms_and_conditions_gdgoncampus_solutionchallengenorthamerica_20260108180055.pdf",
+      "status": 200,
+      "finalUrl": "https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/2026terms_and_conditions_gdgoncampus_solutionchallengenorthamerica_20260108180055.pdf",
+      "method": "HEAD",
+      "redirected": false,
+      "withoutBasePath": 404
+    },
+    {
+      "id": 31,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSejSurzVxlitfePMXnLwMS8bBbq57mfBKZaFp4JyO1VgDokNA/viewform",
+      "status": 200,
+      "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLSejSurzVxlitfePMXnLwMS8bBbq57mfBKZaFp4JyO1VgDokNA/viewform",
+      "method": "HEAD",
+      "redirected": false
+    },
+    {
+      "id": 32,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSej1ra-Np65o_bqeBQBteqzjsFCeASJx3n1Lv4brDLLeOeFpg/viewform",
+      "status": 200,
+      "finalUrl": "https://accounts.google.com/v3/signin/identifier",
+      "method": "HEAD",
+      "redirected": true
+    }
+  ]
+}

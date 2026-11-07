@@ -8,19 +8,23 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-34A853?style=for-the-badge)
 
-**An AWARD-WINNING interactive resource directory for the 2026 GDG on Campus North America Solution Challenge**
+**An interactive resource directory for the 2026 GDG on Campus North America Solution Challenge**
 
-> 🏆 Stunning dark glassmorphism UI with Google brand colors, featuring 30+ curated resources across 6 categories, advanced Framer Motion animations, real-time search & filtering, featured PDF documents showcase, and fully responsive design. Built with modern web technologies for maximum impact.
+> Dark glassmorphism UI with Google brand colors: 32 curated entries (29 unique URLs) across 6 categories, Framer Motion animations, search and filtering, the two official PDFs, and a responsive layout.
 
-**30+ Resources • 6 Categories • 100% Free • 1000% Stunning**
+**32 Entries • 6 Categories • Free resources**
 
-[🚀 Live Demo](https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/) • [🎨 Features](#-features-that-will-blow-your-mind) • [⚡ Quick Start](#-quick-start)
+[🚀 Live Demo](https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/) • [📊 Live dashboard](https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/dashboard/) • [🎨 Features](#-features) • [⚡ Quick Start](#-quick-start)
 
 </div>
 
+Live dashboard: https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/dashboard/
+
+The dashboard audits this repo: it counts the directory, scores the 20-point judging rubric, and compares the site's dates with the two bundled PDFs (the journey page's deadlines sit 21 days after the Official Rules). Source in `site/`; numbers come from `src/data/` at build time, and the build fails if a known-answer check drifts. See [docs/research-review.md](docs/research-review.md) for the full review.
+
 ---
 
-## ✨ Features That Will Blow Your Mind
+## ✨ Features
 
 ### 🎭 **Cinematic Hero Section**
 - **Massive animated gradient text** with 8-second flowing color animation
@@ -44,7 +48,7 @@
 
 ### 🔥 **Next-Level Card Interactions**
 - **12px lift on hover** with smooth bezier curves
-- **Type-specific icons** for every resource (30+ icon mappings!)
+- **Type-specific icons** for every resource type
 - **Rotating external link** on hover (45° rotation + scale)
 - **Corner accent gradients** that intensify on interaction
 - **Animated "Explore →" button** that slides in
@@ -114,13 +118,14 @@ Background:    #0F172A (slate-950)
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YourUsername/GDGUNFSolutionChallange2026.git
-   cd GDGUNFSolutionChallange2026/solution-challenge-resources
+   git clone https://github.com/JesunAhmadUshno/GDGUNFCSOLUTIONCHALLANGE2026.git
+   cd GDGUNFCSOLUTIONCHALLANGE2026
    ```
 
-2. **Install dependencies**
+2. **Install dependencies and check the data**
    ```bash
-   npm install
+   npm ci
+   npm test   # node scripts/check-data.mjs
    ```
 
 3. **Run development server**
@@ -159,8 +164,8 @@ This creates an optimized static export in the `out/` folder.
    - Under **Source**, select **GitHub Actions**
 
 3. **Automatic Deploy**
-   - The workflow will automatically build and deploy on every push to `main`
-   - Your site will be live at: `https://yourusername.github.io/GDGUNFSolutionChallange2026/`
+   - `pages.yml` builds and deploys on every push to `main`
+   - The site is live at `https://jesunahmadushno.github.io/GDGUNFCSOLUTIONCHALLANGE2026/`, with the dashboard at `/dashboard/`
 
 #### Option 2: Manual Deployment
 
@@ -173,17 +178,22 @@ Then upload the `out/` folder to your hosting provider.
 ## 📁 Project Structure
 
 ```
-solution-challenge-resources/
+GDGUNFCSOLUTIONCHALLANGE2026/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # GitHub Actions workflow
+│       ├── pages.yml           # Builds directory + dashboard, deploys to Pages
+│       └── deploy.yml          # Pull request check
 ├── src/
 │   ├── app/
 │   │   ├── globals.css         # Global styles & utilities
 │   │   ├── layout.tsx          # Root layout
 │   │   └── page.tsx            # Main page component
 │   └── data/
-│       └── resources.json      # Resource data
+│       ├── resources.json      # Resource data
+│       ├── journey.json        # Timeline, prizes, criteria (with PDF citations)
+│       └── link-status.json    # Recorded link snapshot
+├── scripts/                    # check-data.mjs, check-links.mjs, audit.mjs
+├── site/                       # Live audit dashboard (Vite), served at /dashboard/
 ├── public/                     # Static assets
 ├── next.config.js              # Next.js configuration
 ├── tailwind.config.js          # Tailwind configuration

@@ -6,6 +6,10 @@ import { Search, ExternalLink, Sparkles, Code, Database, Cpu, Users, Zap, FileTe
 import resourcesData from '@/data/resources.json'
 import Link from 'next/link'
 
+// Must match basePath in next.config.js. Plain <a> hrefs to files in public/ do not get basePath added automatically.
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/GDGUNFCSOLUTIONCHALLANGE2026' : ''
+const withBase = (url: string) => (url.startsWith('/') ? `${BASE_PATH}${url}` : url)
+
 type Resource = {
   id: number
   title: string
@@ -299,6 +303,9 @@ export default function Home() {
               >
                 🎯 Explore Timeline, Prizes, Judging Criteria & More in an Immersive Experience
               </motion.p>
+              <a href={`${BASE_PATH}/dashboard/`} className="mt-3 inline-block text-sm text-slate-300 underline underline-offset-4 hover:text-white">
+                Live dashboard: every count, date and rule on this site checked against its sources
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -394,7 +401,7 @@ export default function Home() {
               return (
                 <motion.a
                   key={doc.id}
-                  href={doc.url}
+                  href={withBase(doc.url)}
                   target="_blank"
                   rel="noopener noreferrer"
                   download
@@ -494,7 +501,7 @@ export default function Home() {
               return (
                 <motion.a
                   key={resource.id}
-                  href={resource.url}
+                  href={withBase(resource.url)}
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}

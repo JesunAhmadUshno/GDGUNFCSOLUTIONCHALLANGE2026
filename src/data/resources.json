@@ -123,7 +123,8 @@
     "url": "https://developers.generativeai.google/products/palm",
     "category": "AI & Data",
     "color": "green",
-    "type": "API"
+    "type": "API",
+    "deprecated": "PaLM API is deprecated; Google directs developers to the Gemini API (see id 13)."
   },
   {
     "id": 15,
@@ -132,7 +133,8 @@
     "url": "http://goo.gle/palm-demos",
     "category": "Community",
     "color": "green",
-    "type": "Repository"
+    "type": "Repository",
+    "deprecated": "PaLM API is deprecated; Google directs developers to the Gemini API (see id 13)."
   },
   {
     "id": 16,
@@ -213,7 +215,8 @@
     "url": "http://goo.gle/palm-discord",
     "category": "Community",
     "color": "green",
-    "type": "Community"
+    "type": "Community",
+    "deprecated": "PaLM API is deprecated; Google directs developers to the Gemini API (see id 13)."
   },
   {
     "id": 25,

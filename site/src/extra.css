@@ -1,3 +1,5 @@
+/* Hallmark · v2.0.0 · Batch 4 rollout 2026-11-16 · Archetype B tool dashboard: tokens, labels, focus and motion standardised; data, copy and structure preserved */
+/* Hallmark · pre-emit critique: P3 H4 E4 S4 R5 V3 · weakest: V, one of the Lab OS dashboards on a shared house pattern; this pass adds the money links and the chat widget and brings the CSS to the floor only */
 /* Dashboard-specific additions on top of the shared Lab OS styles.css. */
 input[type=search], input[type=date] { width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--surface-strong); color: var(--text); font: inherit; }
 input[type=search]:focus-visible, input[type=date]:focus-visible { outline: 3px solid color-mix(in srgb, var(--primary) 45%, transparent); outline-offset: 2px; }

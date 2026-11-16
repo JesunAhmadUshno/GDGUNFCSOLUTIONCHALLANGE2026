@@ -96,7 +96,7 @@ function Select({ label, value, options, onChange }) {
 export default function App() {
   useReveal();
   return (
-    <div className="wrap">
+    <div className="wrap"><a className="skip" href="#top">Skip to content</a>
       <MenuBar />
       <div className="glow" aria-hidden="true" />
       <Hero />
@@ -110,7 +110,7 @@ export default function App() {
       <footer>
         Every number on this page is computed from <code>src/data/*.json</code> at build time or live in your browser, and <code>npm run build</code> fails if the counts drift from a known-answer check.
         Dates and rules are cited to the two PDFs bundled in <code>public/</code>. Link statuses are a recorded snapshot from {SNAP_DATE}. Code: MIT.
-      </footer>
+      <nav className="support" aria-label="Support this work"><a href="https://github.com/sponsors/JesunAhmadUshno">Sponsor this work</a><a href="https://github.com/sponsors/JesunAhmadUshno">Donate</a><a href="https://buymeacoffee.com/jesun">Buy Me a Coffee</a><a href="https://calendly.com/jesunahmadushno/30min">Work with me</a></nav></footer>
     </div>
   );
 }
@@ -118,7 +118,7 @@ export default function App() {
 function Hero() {
   const daysSince = days(LAST_MILESTONE, todayISO());
   return (
-    <header className="card hero window" id="top" data-title="solution-challenge-2026 — README">
+    <header className="card hero window" id="top" data-title="solution-challenge-2026 - README">
       <div className="head">
         <p className="eyebrow">Field guide · retrospective</p>
         <span className="pill info">● Concluded {plural(daysSince, 'day')} ago</span>
@@ -158,7 +158,7 @@ function Explorer() {
   const W = 460, rowH = 30, H = cats.length * rowH + 8, L = 110, max = cats[0][1];
   const x = (v) => (v / max) * (W - L - 30);
   return (
-    <section id="explorer" className="card window reveal" data-title="resources.json — explorer">
+    <section id="explorer" className="card window reveal" data-title="resources.json - explorer">
       <div className="head">
         <div>
           <p className="eyebrow">Live explorer</p>
@@ -181,7 +181,7 @@ function Explorer() {
               <g key={c} transform={`translate(0 ${i * rowH + 4})`}>
                 <text x={L - 8} y={15} textAnchor="end" style={{ fill: 'var(--text)', fontSize: 12 }}>{c}</text>
                 <rect x={L} y={4} width={x(n)} height={16} rx={5} fill="var(--primary)" opacity="0.14" />
-                <rect x={L} y={4} width={x(matchBy[c] || 0)} height={16} rx={5} fill="var(--primary)" style={{ transition: 'width .4s' }} />
+                <rect x={L} y={4} width={x(matchBy[c] || 0)} height={16} rx={5} fill="var(--primary)" />
                 <text x={L + x(n) + 6} y={16}>{matchBy[c] || 0}/{n}</text>
               </g>
             ))}
@@ -219,7 +219,7 @@ function Judging() {
   const bw = (W - pad.l - pad.r) / journey.criteria.length;
   const y = (s) => pad.t + (1 - s / 5) * (H - pad.t - pad.b);
   return (
-    <section id="judging" className="card window reveal" data-title="judging-rubric.app — live">
+    <section id="judging" className="card window reveal" data-title="judging-rubric.app - live">
       <div className="head">
         <div>
           <p className="eyebrow">Score calculator</p>
@@ -282,7 +282,7 @@ function Timeline() {
   const validAsOf = /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : todayISO();
   const inRange = validAsOf >= t0 && validAsOf <= t1;
   return (
-    <section id="timeline" className="card window reveal" data-title="timeline.ics — three sources">
+    <section id="timeline" className="card window reveal" data-title="timeline.ics - three sources">
       <div className="head">
         <div>
           <p className="eyebrow">Timeline comparator</p>
@@ -348,7 +348,7 @@ function Timeline() {
 
 function Prizes() {
   return (
-    <section id="prizes" className="card window reveal" data-title="prizes.md — cross-checked">
+    <section id="prizes" className="card window reveal" data-title="prizes.md - cross-checked">
       <p className="eyebrow">Prize tiers</p>
       <h2>{PRIZES.total} prizes listed, {PRIZES.total - PRIZES.unsupported.length} backed by the Official Rules.</h2>
       <p className="sub">

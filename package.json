@@ -18,7 +18,7 @@
     "lucide-react": "0.323.0"
   },
   "devDependencies": {
-    "@types/node": "20.19.35",
+    "@types/node": "26.6.6",
     "@types/react": "18.3.28",
     "@types/react-dom": "18.3.7",
     "autoprefixer": "10.4.27",
